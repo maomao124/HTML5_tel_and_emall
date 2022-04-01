@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<!--
+Project name(项目名称)：HTML5_tel_and_emall
+  File name(文件名): chrage
+  Authors(作者）: mao
+  Author QQ：1296193245
+  GitHub：https://github.com/maomao124/
+  Date(创建日期)： 2022/4/1
+  Time(创建时间)： 21:15
+  Description(描述)： 无
+-->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+
+    <title>手机充电特效</title>
+    <link rel="stylesheet" href="charge.css">
+</head>
+
+<body>
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<div class="box">
+    <div class="number">
+        <span id="num">1</span>%
+    </div>
+    <div class="contrast">
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble-home"></div>
+        <div class="circle"></div>
+    </div>
+</div>
+<script>
+    var number = document.getElementById("num")
+    console.log(number)
+    setInterval(function ()
+    {
+        var value = number.innerHTML - 0
+        console.log(value)
+        value = value + (parseInt(Math.random() * 5))
+        number.innerHTML = value
+        if (value >= 100)
+        {
+            number.innerHTML = 0
+        }
+    }, parseInt(Math.random() * 2000));
+</script>
+</body>
+</html>
